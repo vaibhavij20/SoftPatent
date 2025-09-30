@@ -1,0 +1,30 @@
+{
+  "name": "my-ai-refactor-extension",
+  "displayName": "My AI Refactor Extension",
+  "description": "Prototype VS Code extension to send editing events to a backend",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:extension.start",
+    "onCommand:extension.suggest"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.start",
+        "title": "Start My AI Refactor Extension"
+      },
+      {
+        "command": "extension.suggest",
+        "title": "Get AI Refactor Suggestions"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "echo \"No build step\""
+  }
+}

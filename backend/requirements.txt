@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+networkx
+# optional
+openai
+# tree-sitter python bindings
+tree_sitter

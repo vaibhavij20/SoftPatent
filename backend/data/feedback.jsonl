@@ -1,0 +1,9 @@
+{"feedback": "Great suggestion!"}
+{"feedback": "Great suggestion!"}
+{"feedback": "Accepted", "file": "../example_repo/main.py", "suggestion": "Remove unused import", "action": "accepted"}
+{"feedback": "Accepted", "file": "../example_repo/main.py", "suggestion": "Remove unused import", "action": "accepted", "user": "shiva"}
+{"feedback": "Rejected", "file": "../example_repo/main.py", "suggestion": "Split long function", "action": "rejected", "user": "shiva"}
+{"feedback": "Edited", "file": "../example_repo/main.py", "suggestion": "Use logging instead of print", "action": "edited", "user": "shiva"}
+{"feedback": "Accepted", "file": "../example_repo/main.py", "suggestion": "Remove unused import", "action": "accepted", "user": "shiva"}
+{"feedback": "Rejected", "file": "../example_repo/main.py", "suggestion": "Split long function", "action": "rejected", "user": "shiva"}
+{"feedback": "Edited", "file": "../example_repo/main.py", "suggestion": "Use logging instead of print", "action": "edited", "user": "shiva"}
