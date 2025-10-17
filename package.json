@@ -9,10 +9,59 @@
   "categories": ["Other"],
   "activationEvents": [
     "onCommand:extension.start",
-    "onCommand:extension.suggest"
+    "onCommand:extension.suggest",
+    "onCommand:extension.workspaceAnalyze",
+    "onCommand:extension.applyPatch",
+    "onCommand:extension.showTimeline",
+    "onCommand:extension.toggleTuning",
+    "onCommand:extension.resetTuning",
+    "onCommand:extension.runValidationPack"
   ],
   "main": "./src/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "My AI Refactor Extension",
+      "properties": {
+        "myAiRefactor.backend.host": {
+          "type": "string",
+          "default": "127.0.0.1",
+          "description": "Backend host"
+        },
+        "myAiRefactor.backend.port": {
+          "type": "number",
+          "default": 8000,
+          "description": "Backend port (fallback to 8001 if unreachable)"
+        },
+        "myAiRefactor.domain": {
+          "type": "string",
+          "default": "gaming",
+          "enum": ["gaming", "robotics", "hpc", "medical", "satellite", "sustainability", "speech_therapy"],
+          "description": "Target domain for reasoning and benchmarking"
+        },
+        "myAiRefactor.optimizationProfile": {
+          "type": "string",
+          "default": "balanced",
+          "enum": ["latency", "throughput", "balanced"],
+          "description": "Desired optimization profile"
+        },
+        "myAiRefactor.complianceTargets": {
+          "type": "array",
+          "items": {"type": "string"},
+          "default": [],
+          "description": "Compliance profiles to check (e.g., iec62304, misra_c, rt_safety)"
+        },
+        "myAiRefactor.audit.timelineEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable timeline recording and UI"
+        },
+        "myAiRefactor.audit.tuningEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable adaptive tuning loop"
+        }
+      }
+    },
     "commands": [
       {
         "command": "extension.start",
@@ -21,6 +70,30 @@
       {
         "command": "extension.suggest",
         "title": "Get AI Refactor Suggestions"
+      },
+      {
+        "command": "extension.workspaceAnalyze",
+        "title": "Workspace: Analyze & Benchmark"
+      },
+      {
+        "command": "extension.applyPatch",
+        "title": "Apply Patch (AI)"
+      },
+      {
+        "command": "extension.showTimeline",
+        "title": "Show AI Timeline"
+      },
+      {
+        "command": "extension.toggleTuning",
+        "title": "Toggle AI Tuning"
+      },
+      {
+        "command": "extension.resetTuning",
+        "title": "Reset AI Tuning"
+      },
+      {
+        "command": "extension.runValidationPack",
+        "title": "Run Validation Pack"
       }
     ]
   },

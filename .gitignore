@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Backend runtime data
+backend/data/
+backend/code_debug.log
+backend/events.log
+
+# Environment files
+backend/.env
