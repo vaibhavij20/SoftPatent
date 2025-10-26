@@ -48,9 +48,13 @@
  - `backend/analysis/` modules:
    - `suggestion.py`, `microprofiler.py`, `arch_guard.py`, `compliance.py`, `benchmark.py`, `validation_packs/`, `analyzer.py`, `profiler.py`, `timeline.py`, `tuning.py`.
  - **Gemini integration**: `backend/analysis/openai_integration.py` loads `GEMINI_API_KEY` from `backend/.env` and calls `google-generativeai` where complexity warrants. Turn on by setting the key and having `google-generativeai` installed (already in `requirements.txt`).
- 
- ## Quick Start (venv)
- ```bash
+
+## Language Support
+- **Python (primary)**: Full AST-based analysis, micro-profiler integration, architecture/compliance/GNN audits. Endpoints: `/suggest`, `/apply_patch`, `/workspace_analysis`, etc. Core modules in `backend/analysis/*.py`.
+- **Java & C/C++ (heuristics)**: Lightweight suggestion heuristics (long methods/functions, direct prints, unused imports/includes) routed by file extension in `backend/analysis/suggestion.py`. Architecture/compliance/GNN post-checks still apply. For deeper analysis, integrate Tree-sitter grammars and language-specific analyzers.
+
+## Quick Start (venv)
+```bash
  # 1) Backend
  cd backend
  python -m venv .venv
