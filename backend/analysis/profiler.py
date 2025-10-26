@@ -20,8 +20,15 @@ def run_profile_on_example(path):
         runpy.run_path(str(main), run_name='__main__')
     except SystemExit:
         pass
-    finally:
+    except Exception as e:
+        # Return error while still producing whatever profile we captured so far
         pr.disable()
+        return {"error": str(e)}
+    finally:
+        try:
+            pr.disable()
+        except Exception:
+            pass
     s = io.StringIO()
     ps = pstats.Stats(pr, stream=s).sort_stats('cumulative')
     ps.print_stats(20)

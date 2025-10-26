@@ -5,3 +5,6 @@ networkx
 openai
 # tree-sitter python bindings
 tree_sitter
+google-generativeai
+python-dotenv
+matplotlib

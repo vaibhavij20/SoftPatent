@@ -1,0 +1,12 @@
+{
+  "seriesId": "godot-demo-1",
+  "artifacts": [
+    "/Users/vaibhavijaiswal/Patent/backend/data/validation/godot-demo-1/gaming_fps_1760343037.json",
+    "/Users/vaibhavijaiswal/Patent/backend/data/validation/godot-demo-1/gaming_fps_1760343037.png"
+  ],
+  "summary": {
+    "avg_fps": 53.41,
+    "frames": 120
+  },
+  "out_dir": "/Users/vaibhavijaiswal/Patent/backend/data/validation/godot-demo-1"
+}

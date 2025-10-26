@@ -1,0 +1,108 @@
+{
+  "analysis": {
+    "files": {
+      "/tmp/cs-ros-demo-1/turtlesim/launch/multisim.launch.py": {
+        "functions": [
+          "generate_launch_description"
+        ],
+        "classes": [],
+        "num_lines": 28
+      },
+      "/tmp/cs-ros-demo-1/turtlesim/src/turtlesim/__init__.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 0
+      }
+    },
+    "graph": {
+      "/tmp/cs-ros-demo-1/turtlesim/launch/multisim.launch.py": [
+        "launch",
+        "launch_ros.actions"
+      ],
+      "launch": [],
+      "launch_ros.actions": [],
+      "/tmp/cs-ros-demo-1/turtlesim/src/turtlesim/__init__.py": []
+    }
+  },
+  "profile": {
+    "error": "expected an indented block after function definition on line 28 (main.py, line 29)"
+  },
+  "compliance": {
+    "domain": "robotics",
+    "targets": [],
+    "findings": [
+      {
+        "rule": "realtime",
+        "status": "unknown",
+        "note": "Bound CPU to preserve control loop frequency.",
+        "risk": "Control instability"
+      },
+      {
+        "rule": "numerics",
+        "status": "unknown",
+        "note": "Use stable solvers and clamp sensor outliers.",
+        "risk": "Pose divergence"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "warn": 2,
+      "failed": 0
+    }
+  },
+  "benchmark": {
+    "before": {
+      "domain": "robotics",
+      "project_path": "/tmp/cs-ros-demo-1",
+      "baseline_path": null,
+      "result": {
+        "domain": "robotics",
+        "metric": "slam_ate_m",
+        "value": 0.516,
+        "details": {
+          "runtime_sec": 0.89,
+          "cpu_util": 72.8,
+          "mem_mb": 221.6
+        }
+      },
+      "started": 1760343038.82368,
+      "finished": 1760343038.823688,
+      "duration_sec": 0.0
+    },
+    "after": {
+      "domain": "robotics",
+      "project_path": "/tmp/cs-ros-demo-1",
+      "baseline_path": null,
+      "result": {
+        "domain": "robotics",
+        "metric": "slam_ate_m",
+        "value": 0.516,
+        "details": {
+          "runtime_sec": 0.89,
+          "cpu_util": 72.8,
+          "mem_mb": 221.6
+        }
+      },
+      "started": 1760343038.8241248,
+      "finished": 1760343038.824128,
+      "duration_sec": 0.0
+    },
+    "compare": {
+      "metric": "slam_ate_m",
+      "before": 0.516,
+      "after": 0.516,
+      "delta": 0.0,
+      "improved": false
+    }
+  },
+  "suggestions": [
+    {
+      "message": " Syntax error: expected an indented block after function definition on line 28 (main.py, line 29)",
+      "patch": "",
+      "reason": "Code could not be parsed. Error: expected an indented block after function definition on line 28 (main.py, line 29)",
+      "audit": {
+        "type": "syntax_error"
+      }
+    }
+  ]
+}

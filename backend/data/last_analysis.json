@@ -1,3 +1,178 @@
 {
-  "error": "path not found"
+  "files": {
+    "/Users/vaibhavijaiswal/Patent/send_feedback.py": {
+      "functions": [],
+      "classes": [],
+      "num_lines": 36
+    },
+    "/Users/vaibhavijaiswal/Patent/example_repo/main.py": {
+      "error": "expected an indented block after function definition on line 28 (<unknown>, line 29)"
+    },
+    "/Users/vaibhavijaiswal/Patent/example_repo/test_main.py": {
+      "functions": [
+        "inefficient_sum",
+        "main",
+        "test_add",
+        "test_multiply"
+      ],
+      "classes": [
+        "TestMath"
+      ],
+      "num_lines": 24
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/app.py": {
+      "functions": [],
+      "classes": [],
+      "num_lines": 230
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/openai_integration.py": {
+      "functions": [
+        "_configure_gemini",
+        "call_gemini_refactor",
+        "call_ai"
+      ],
+      "classes": [],
+      "num_lines": 38
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/tree_parser.py": {
+      "error": "expected an indented block after function definition on line 1 (<unknown>, line 2)"
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/benchmark.py": {
+      "functions": [
+        "_now_ts",
+        "_simulate_runtime_metrics",
+        "_gaming_fps",
+        "_hpc_linpack",
+        "_robotics_slam",
+        "run_benchmark",
+        "compare_results",
+        "record_result"
+      ],
+      "classes": [],
+      "num_lines": 109
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/suggestion.py": {
+      "functions": [
+        "_compute_ast_metrics",
+        "_domain_rationale",
+        "generate_suggestions",
+        "generate_suggestion_patch"
+      ],
+      "classes": [],
+      "num_lines": 145
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/compliance.py": {
+      "functions": [
+        "check_compliance"
+      ],
+      "classes": [],
+      "num_lines": 31
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/feedback.py": {
+      "functions": [
+        "store_feedback"
+      ],
+      "classes": [],
+      "num_lines": 7
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/analyzer.py": {
+      "functions": [
+        "analyze_project"
+      ],
+      "classes": [],
+      "num_lines": 43
+    },
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/profiler.py": {
+      "functions": [
+        "run_profile_on_example"
+      ],
+      "classes": [],
+      "num_lines": 28
+    }
+  },
+  "graph": {
+    "/Users/vaibhavijaiswal/Patent/send_feedback.py": [
+      "requests",
+      "json",
+      "time"
+    ],
+    "requests": [],
+    "json": [],
+    "time": [],
+    "/Users/vaibhavijaiswal/Patent/example_repo/test_main.py": [
+      "unittest",
+      "main"
+    ],
+    "unittest": [],
+    "main": [],
+    "/Users/vaibhavijaiswal/Patent/backend/app.py": [
+      "fastapi",
+      "fastapi.responses",
+      "os",
+      "json",
+      "time",
+      "pathlib",
+      "analysis.analyzer",
+      "analysis.suggestion",
+      "analysis.profiler",
+      "analysis.benchmark",
+      "analysis.feedback",
+      "analysis.compliance"
+    ],
+    "fastapi": [],
+    "fastapi.responses": [],
+    "os": [],
+    "pathlib": [],
+    "analysis.analyzer": [],
+    "analysis.suggestion": [],
+    "analysis.profiler": [],
+    "analysis.benchmark": [],
+    "analysis.feedback": [],
+    "analysis.compliance": [],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/openai_integration.py": [
+      "os",
+      "dotenv",
+      "google.generativeai"
+    ],
+    "dotenv": [],
+    "google.generativeai": [],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/benchmark.py": [
+      "json",
+      "time",
+      "pathlib",
+      "typing"
+    ],
+    "typing": [],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/suggestion.py": [
+      "ast",
+      "typing",
+      "openai_integration"
+    ],
+    "ast": [],
+    "openai_integration": [],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/compliance.py": [
+      "typing"
+    ],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/feedback.py": [
+      "json",
+      "pathlib"
+    ],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/analyzer.py": [
+      "ast",
+      "pathlib",
+      "networkx"
+    ],
+    "networkx": [],
+    "/Users/vaibhavijaiswal/Patent/backend/analysis/profiler.py": [
+      "cProfile",
+      "pstats",
+      "io",
+      "runpy",
+      "pathlib"
+    ],
+    "cProfile": [],
+    "pstats": [],
+    "io": [],
+    "runpy": []
+  }
 }

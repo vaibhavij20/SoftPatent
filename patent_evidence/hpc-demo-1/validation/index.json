@@ -1,0 +1,12 @@
+{
+  "seriesId": "hpc-demo-1",
+  "artifacts": [
+    "/Users/vaibhavijaiswal/Patent/backend/data/validation/hpc-demo-1/hpc_linpack_1760343060.json",
+    "/Users/vaibhavijaiswal/Patent/backend/data/validation/hpc-demo-1/hpc_linpack_1760343060.png"
+  ],
+  "summary": {
+    "avg_gflops": 43.64,
+    "trials": 60
+  },
+  "out_dir": "/Users/vaibhavijaiswal/Patent/backend/data/validation/hpc-demo-1"
+}

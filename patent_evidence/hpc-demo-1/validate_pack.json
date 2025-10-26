@@ -1,0 +1,1 @@
+{"status":"ok","index":{"seriesId":"hpc-demo-1","artifacts":["/Users/vaibhavijaiswal/Patent/backend/data/validation/hpc-demo-1/hpc_linpack_1760343377.json","/Users/vaibhavijaiswal/Patent/backend/data/validation/hpc-demo-1/hpc_linpack_1760343377.png"],"summary":{"avg_gflops":61.68,"trials":60},"out_dir":"/Users/vaibhavijaiswal/Patent/backend/data/validation/hpc-demo-1"}}

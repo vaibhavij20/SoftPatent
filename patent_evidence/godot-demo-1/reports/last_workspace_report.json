@@ -1,0 +1,1882 @@
+{
+  "analysis": {
+    "files": {
+      "/tmp/cs-godot-demo-1/glsl_builders.py": {
+        "functions": [
+          "include_file_in_rd_header",
+          "build_rd_header",
+          "build_rd_headers",
+          "include_file_in_raw_header",
+          "build_raw_header",
+          "build_raw_headers",
+          "__init__",
+          "__init__"
+        ],
+        "classes": [
+          "RDHeaderStruct",
+          "RAWHeaderStruct"
+        ],
+        "num_lines": 175
+      },
+      "/tmp/cs-godot-demo-1/version.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 9
+      },
+      "/tmp/cs-godot-demo-1/methods.py": {
+        "functions": [
+          "set_scu_folders",
+          "add_source_files_orig",
+          "add_source_files_scu",
+          "add_source_files",
+          "redirect_emitter",
+          "disable_warnings",
+          "force_optimization_on_debug",
+          "add_module_version_string",
+          "get_version_info",
+          "get_git_info",
+          "get_cmdline_bool",
+          "detect_modules",
+          "is_module",
+          "convert_custom_modules_path",
+          "module_add_dependencies",
+          "module_check_dependencies",
+          "sort_module_list",
+          "use_windows_spawn_fix",
+          "no_verbose",
+          "detect_visual_c_compiler_version",
+          "find_visual_c_batch_file",
+          "generate_cpp_hint_file",
+          "glob_recursive",
+          "precious_program",
+          "add_shared_library",
+          "add_library",
+          "add_program",
+          "CommandNoCache",
+          "Run",
+          "detect_darwin_toolchain_path",
+          "detect_darwin_sdk_path",
+          "is_apple_clang",
+          "get_compiler_version",
+          "update_compiler_version_cache",
+          "using_gcc",
+          "using_clang",
+          "using_emcc",
+          "show_progress",
+          "convert_size",
+          "get_size",
+          "clean_cache",
+          "prepare_cache",
+          "prepare_purge",
+          "prepare_timer",
+          "dump",
+          "generate_vs_project",
+          "generate_copyright_header",
+          "generated_wrapper",
+          "get_buffer",
+          "compress_buffer",
+          "format_buffer",
+          "to_escaped_cstring",
+          "to_raw_cstring",
+          "get_default_include_paths",
+          "add_module",
+          "is_engine",
+          "get_files",
+          "mySubProcess",
+          "mySpawn",
+          "progress_finish",
+          "purge_flaky_files",
+          "print_elapsed_time",
+          "glob_recursive_2",
+          "get_bool",
+          "format_key_value",
+          "get_dependencies",
+          "__init__",
+          "__call__"
+        ],
+        "classes": [
+          "ShowProgress"
+        ],
+        "num_lines": 1682
+      },
+      "/tmp/cs-godot-demo-1/platform_methods.py": {
+        "functions": [
+          "detect_arch",
+          "validate_arch",
+          "get_build_version",
+          "lipo",
+          "get_mvk_sdk_path",
+          "detect_mvk",
+          "combine_libs_apple_embedded",
+          "generate_bundle_apple_embedded",
+          "setup_swift_builder",
+          "int_or_zero",
+          "ver_parse",
+          "generate_swift_action"
+        ],
+        "classes": [],
+        "num_lines": 327
+      },
+      "/tmp/cs-godot-demo-1/gles3_builders.py": {
+        "functions": [
+          "include_file_in_gles3_header",
+          "build_gles3_header",
+          "build_gles3_headers",
+          "__init__"
+        ],
+        "classes": [
+          "GLES3HeaderStruct"
+        ],
+        "num_lines": 520
+      },
+      "/tmp/cs-godot-demo-1/scu_builders.py": {
+        "functions": [
+          "clear_out_stale_files",
+          "folder_not_found",
+          "find_files_in_folder",
+          "write_output_file",
+          "write_exception_output_file",
+          "find_section_name",
+          "process_folder",
+          "generate_scu_files"
+        ],
+        "classes": [],
+        "num_lines": 399
+      },
+      "/tmp/cs-godot-demo-1/core/core_builders.py": {
+        "functions": [
+          "disabled_class_builder",
+          "version_info_builder",
+          "version_hash_builder",
+          "encryption_key_builder",
+          "make_certs_header",
+          "make_authors_header",
+          "make_donors_header",
+          "make_license_header",
+          "close_section",
+          "close_section",
+          "__init__",
+          "next_line",
+          "next_tag"
+        ],
+        "classes": [
+          "LicenseReader"
+        ],
+        "num_lines": 291
+      },
+      "/tmp/cs-godot-demo-1/platform/platform_builders.py": {
+        "functions": [
+          "export_icon_builder",
+          "register_platform_apis_builder"
+        ],
+        "classes": [],
+        "num_lines": 44
+      },
+      "/tmp/cs-godot-demo-1/tests/create_test.py": {
+        "functions": [
+          "main"
+        ],
+        "classes": [],
+        "num_lines": 136
+      },
+      "/tmp/cs-godot-demo-1/main/main_builders.py": {
+        "functions": [
+          "make_splash",
+          "make_splash_editor",
+          "make_app_icon"
+        ],
+        "classes": [],
+        "num_lines": 42
+      },
+      "/tmp/cs-godot-demo-1/modules/modules_builders.py": {
+        "functions": [
+          "modules_enabled_builder",
+          "register_module_types_builder",
+          "modules_tests_builder"
+        ],
+        "classes": [],
+        "num_lines": 60
+      },
+      "/tmp/cs-godot-demo-1/editor/editor_builders.py": {
+        "functions": [
+          "doc_data_class_path_builder",
+          "register_exporters_builder",
+          "make_doc_header",
+          "make_translations"
+        ],
+        "classes": [],
+        "num_lines": 148
+      },
+      "/tmp/cs-godot-demo-1/editor/template_builders.py": {
+        "functions": [
+          "parse_template",
+          "make_templates"
+        ],
+        "classes": [],
+        "num_lines": 72
+      },
+      "/tmp/cs-godot-demo-1/editor/icons/editor_icons_builders.py": {
+        "functions": [
+          "make_editor_icons_action"
+        ],
+        "classes": [],
+        "num_lines": 47
+      },
+      "/tmp/cs-godot-demo-1/editor/themes/editor_theme_builders.py": {
+        "functions": [
+          "make_fonts_header"
+        ],
+        "classes": [],
+        "num_lines": 21
+      },
+      "/tmp/cs-godot-demo-1/modules/svg/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 7
+      },
+      "/tmp/cs-godot-demo-1/modules/enet/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 18
+      },
+      "/tmp/cs-godot-demo-1/modules/websocket/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 19
+      },
+      "/tmp/cs-godot-demo-1/modules/ogg/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 17
+      },
+      "/tmp/cs-godot-demo-1/modules/meshoptimizer/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 7
+      },
+      "/tmp/cs-godot-demo-1/modules/csg/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 24
+      },
+      "/tmp/cs-godot-demo-1/modules/tinyexr/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/vorbis/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 19
+      },
+      "/tmp/cs-godot-demo-1/modules/objectdb_profiler/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/lightmapper_rd/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/freetype/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/gdscript/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 19
+      },
+      "/tmp/cs-godot-demo-1/modules/openxr/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 80
+      },
+      "/tmp/cs-godot-demo-1/modules/minimp3/config.py": {
+        "functions": [
+          "can_build",
+          "get_opts",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 25
+      },
+      "/tmp/cs-godot-demo-1/modules/upnp/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 17
+      },
+      "/tmp/cs-godot-demo-1/modules/camera/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 10
+      },
+      "/tmp/cs-godot-demo-1/modules/ktx/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 7
+      },
+      "/tmp/cs-godot-demo-1/modules/fbx/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 20
+      },
+      "/tmp/cs-godot-demo-1/modules/hdr/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/jsonrpc/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/mbedtls/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/etcpak/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/tga/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/godot_physics_3d/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/gltf/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 37
+      },
+      "/tmp/cs-godot-demo-1/modules/basis_universal/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 8
+      },
+      "/tmp/cs-godot-demo-1/modules/webp/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/regex/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 17
+      },
+      "/tmp/cs-godot-demo-1/modules/glslang/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 8
+      },
+      "/tmp/cs-godot-demo-1/modules/navigation_3d/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 10
+      },
+      "/tmp/cs-godot-demo-1/modules/jpg/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/interactive_music/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 21
+      },
+      "/tmp/cs-godot-demo-1/modules/zip/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 17
+      },
+      "/tmp/cs-godot-demo-1/modules/navigation_2d/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/godot_physics_2d/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/webxr/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 14
+      },
+      "/tmp/cs-godot-demo-1/modules/text_server_fb/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "is_enabled",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 22
+      },
+      "/tmp/cs-godot-demo-1/modules/noise/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 19
+      },
+      "/tmp/cs-godot-demo-1/modules/raycast/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 13
+      },
+      "/tmp/cs-godot-demo-1/modules/raycast/godot_update_embree.py": {
+        "functions": [
+          "on_rm_error"
+        ],
+        "classes": [],
+        "num_lines": 183
+      },
+      "/tmp/cs-godot-demo-1/modules/mono/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path",
+          "is_enabled"
+        ],
+        "classes": [],
+        "num_lines": 36
+      },
+      "/tmp/cs-godot-demo-1/modules/mono/__init__.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 0
+      },
+      "/tmp/cs-godot-demo-1/modules/jolt_physics/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/msdfgen/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 7
+      },
+      "/tmp/cs-godot-demo-1/modules/text_server_adv/config.py": {
+        "functions": [
+          "can_build",
+          "get_opts",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 25
+      },
+      "/tmp/cs-godot-demo-1/modules/text_server_adv/text_server_adv_builders.py": {
+        "functions": [
+          "make_icu_data"
+        ],
+        "classes": [],
+        "num_lines": 21
+      },
+      "/tmp/cs-godot-demo-1/modules/astcenc/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/dds/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/cvtt/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/bmp/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/theora/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 19
+      },
+      "/tmp/cs-godot-demo-1/modules/webrtc/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 20
+      },
+      "/tmp/cs-godot-demo-1/modules/bcdec/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/mobile_vr/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 16
+      },
+      "/tmp/cs-godot-demo-1/modules/xatlas_unwrap/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/multiplayer/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 20
+      },
+      "/tmp/cs-godot-demo-1/modules/betsy/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/gridmap/config.py": {
+        "functions": [
+          "can_build",
+          "configure",
+          "get_doc_classes",
+          "get_doc_path"
+        ],
+        "classes": [],
+        "num_lines": 14
+      },
+      "/tmp/cs-godot-demo-1/modules/vhacd/config.py": {
+        "functions": [
+          "can_build",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 6
+      },
+      "/tmp/cs-godot-demo-1/modules/text_server_adv/gdextension_build/methods.py": {
+        "functions": [
+          "disable_warnings",
+          "prepare_timer",
+          "make_icu_data",
+          "write_macos_plist",
+          "print_elapsed_time"
+        ],
+        "classes": [],
+        "num_lines": 84
+      },
+      "/tmp/cs-godot-demo-1/modules/mono/build_scripts/build_assemblies.py": {
+        "functions": [
+          "find_dotnet_cli",
+          "find_msbuild_standalone_windows",
+          "find_msbuild_mono_windows",
+          "find_msbuild_mono_unix",
+          "find_msbuild_tools_path_reg",
+          "find_any_msbuild_tool",
+          "run_msbuild",
+          "build_godot_api",
+          "generate_sdk_package_versions",
+          "build_all",
+          "main",
+          "copy_target"
+        ],
+        "classes": [
+          "ToolsLocation"
+        ],
+        "num_lines": 441
+      },
+      "/tmp/cs-godot-demo-1/modules/mono/build_scripts/mono_configure.py": {
+        "functions": [
+          "is_desktop",
+          "is_unix_like",
+          "module_supports_tools_on",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 22
+      },
+      "/tmp/cs-godot-demo-1/modules/mono/build_scripts/__init__.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 0
+      },
+      "/tmp/cs-godot-demo-1/modules/text_server_fb/gdextension_build/methods.py": {
+        "functions": [
+          "disable_warnings",
+          "prepare_timer",
+          "write_macos_plist",
+          "print_elapsed_time"
+        ],
+        "classes": [],
+        "num_lines": 60
+      },
+      "/tmp/cs-godot-demo-1/scene/theme/default_theme_builders.py": {
+        "functions": [
+          "make_fonts_header"
+        ],
+        "classes": [],
+        "num_lines": 21
+      },
+      "/tmp/cs-godot-demo-1/scene/theme/icons/default_theme_icons_builders.py": {
+        "functions": [
+          "make_default_theme_icons_action"
+        ],
+        "classes": [],
+        "num_lines": 35
+      },
+      "/tmp/cs-godot-demo-1/doc/tools/make_rst.py": {
+        "functions": [
+          "main",
+          "print_error",
+          "print_warning",
+          "translate",
+          "get_git_branch",
+          "make_rst_class",
+          "make_type",
+          "make_enum",
+          "make_method_signature",
+          "make_setter_signature",
+          "make_getter_signature",
+          "make_deprecated_experimental",
+          "make_heading",
+          "make_footer",
+          "make_separator",
+          "make_link",
+          "make_rst_index",
+          "is_in_tagset",
+          "get_tag_and_args",
+          "parse_link_target",
+          "format_text_block",
+          "preformat_text_block",
+          "format_context_name",
+          "escape_rst",
+          "format_table",
+          "sanitize_class_name",
+          "sanitize_operator_name",
+          "__init__",
+          "parse_class",
+          "parse_params",
+          "sort_classes",
+          "__init__",
+          "__init__",
+          "to_rst",
+          "from_element",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "__init__",
+          "_is_editor_class",
+          "update_class_group",
+          "__init__",
+          "add_hit",
+          "resolve_type"
+        ],
+        "classes": [
+          "State",
+          "TagState",
+          "TypeName",
+          "DefinitionBase",
+          "PropertyDef",
+          "ParameterDef",
+          "SignalDef",
+          "AnnotationDef",
+          "MethodDef",
+          "ConstantDef",
+          "EnumDef",
+          "ThemeItemDef",
+          "ClassDef",
+          "ScriptLanguageParityCheck"
+        ],
+        "num_lines": 2611
+      },
+      "/tmp/cs-godot-demo-1/doc/tools/doc_status.py": {
+        "functions": [
+          "validate_tag",
+          "color",
+          "nonescape_len",
+          "__init__",
+          "__add__",
+          "increment",
+          "is_ok",
+          "to_configured_colored_string",
+          "to_colored_string",
+          "__init__",
+          "__add__",
+          "is_ok",
+          "is_empty",
+          "make_output",
+          "generate_for_class"
+        ],
+        "classes": [
+          "ClassStatusProgress",
+          "ClassStatus"
+        ],
+        "num_lines": 498
+      },
+      "/tmp/cs-godot-demo-1/tests/python_build/validate_builders.py": {
+        "functions": [
+          "main"
+        ],
+        "classes": [],
+        "num_lines": 63
+      },
+      "/tmp/cs-godot-demo-1/platform/macos/platform_macos_builders.py": {
+        "functions": [
+          "generate_bundle",
+          "make_debug_macos"
+        ],
+        "classes": [],
+        "num_lines": 121
+      },
+      "/tmp/cs-godot-demo-1/platform/macos/msvs.py": {
+        "functions": [
+          "get_platforms",
+          "get_configurations",
+          "get_build_prefix"
+        ],
+        "classes": [],
+        "num_lines": 11
+      },
+      "/tmp/cs-godot-demo-1/platform/macos/detect.py": {
+        "functions": [
+          "get_name",
+          "can_build",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_flags",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 294
+      },
+      "/tmp/cs-godot-demo-1/platform/web/serve.py": {
+        "functions": [
+          "shell_open",
+          "serve",
+          "server_bind",
+          "end_headers"
+        ],
+        "classes": [
+          "DualStackServer",
+          "CORSRequestHandler"
+        ],
+        "num_lines": 78
+      },
+      "/tmp/cs-godot-demo-1/platform/web/emscripten_helpers.py": {
+        "functions": [
+          "run_closure_compiler",
+          "create_engine_file",
+          "create_template_zip",
+          "get_template_zip_path",
+          "add_js_libraries",
+          "add_js_pre",
+          "add_js_post",
+          "add_js_externs"
+        ],
+        "classes": [],
+        "num_lines": 133
+      },
+      "/tmp/cs-godot-demo-1/platform/web/detect.py": {
+        "functions": [
+          "get_name",
+          "can_build",
+          "get_tools",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_flags",
+          "library_emitter",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 347
+      },
+      "/tmp/cs-godot-demo-1/platform/ios/platform_ios_builders.py": {
+        "functions": [
+          "generate_bundle"
+        ],
+        "classes": [],
+        "num_lines": 7
+      },
+      "/tmp/cs-godot-demo-1/platform/ios/detect.py": {
+        "functions": [
+          "get_name",
+          "can_build",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_flags",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 182
+      },
+      "/tmp/cs-godot-demo-1/platform/visionos/platform_visionos_builders.py": {
+        "functions": [
+          "generate_bundle"
+        ],
+        "classes": [],
+        "num_lines": 7
+      },
+      "/tmp/cs-godot-demo-1/platform/visionos/detect.py": {
+        "functions": [
+          "get_name",
+          "can_build",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_flags",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 161
+      },
+      "/tmp/cs-godot-demo-1/platform/android/platform_android_builders.py": {
+        "functions": [
+          "generate_android_binaries"
+        ],
+        "classes": [],
+        "num_lines": 34
+      },
+      "/tmp/cs-godot-demo-1/platform/android/detect.py": {
+        "functions": [
+          "get_name",
+          "can_build",
+          "get_tools",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_env_android_sdk_root",
+          "get_min_sdk_version",
+          "get_android_ndk_root",
+          "get_ndk_version",
+          "get_min_target_api",
+          "get_flags",
+          "install_ndk_if_needed",
+          "detect_swappy",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 248
+      },
+      "/tmp/cs-godot-demo-1/platform/windows/msvs.py": {
+        "functions": [
+          "get_platforms",
+          "get_configurations",
+          "get_build_prefix"
+        ],
+        "classes": [],
+        "num_lines": 24
+      },
+      "/tmp/cs-godot-demo-1/platform/windows/platform_windows_builders.py": {
+        "functions": [
+          "make_debug_mingw"
+        ],
+        "classes": [],
+        "num_lines": 12
+      },
+      "/tmp/cs-godot-demo-1/platform/windows/detect.py": {
+        "functions": [
+          "get_name",
+          "try_cmd",
+          "can_build",
+          "get_mingw_bin_prefix",
+          "get_detected",
+          "detect_build_env_arch",
+          "get_tools",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_flags",
+          "configure_msvc",
+          "get_ar_version",
+          "get_is_ar_thin_supported",
+          "tempfile_arg_esc_func",
+          "configure_mingw",
+          "configure",
+          "check_d3d12_installed",
+          "spawn_capture"
+        ],
+        "classes": [],
+        "num_lines": 936
+      },
+      "/tmp/cs-godot-demo-1/platform/linuxbsd/platform_linuxbsd_builders.py": {
+        "functions": [
+          "make_debug_linuxbsd"
+        ],
+        "classes": [],
+        "num_lines": 10
+      },
+      "/tmp/cs-godot-demo-1/platform/linuxbsd/msvs.py": {
+        "functions": [
+          "get_platforms",
+          "get_configurations",
+          "get_build_prefix"
+        ],
+        "classes": [],
+        "num_lines": 11
+      },
+      "/tmp/cs-godot-demo-1/platform/linuxbsd/detect.py": {
+        "functions": [
+          "get_name",
+          "can_build",
+          "get_opts",
+          "get_doc_classes",
+          "get_doc_path",
+          "get_flags",
+          "configure"
+        ],
+        "classes": [],
+        "num_lines": 547
+      },
+      "/tmp/cs-godot-demo-1/core/extension/make_interface_dumper.py": {
+        "functions": [
+          "run"
+        ],
+        "classes": [],
+        "num_lines": 37
+      },
+      "/tmp/cs-godot-demo-1/core/extension/make_wrappers.py": {
+        "functions": [
+          "generate_mod_version",
+          "generate_ex_version",
+          "run"
+        ],
+        "classes": [],
+        "num_lines": 139
+      },
+      "/tmp/cs-godot-demo-1/core/input/input_builders.py": {
+        "functions": [
+          "make_default_controller_mappings"
+        ],
+        "classes": [],
+        "num_lines": 63
+      },
+      "/tmp/cs-godot-demo-1/core/object/make_virtuals.py": {
+        "functions": [
+          "generate_version",
+          "run"
+        ],
+        "classes": [],
+        "num_lines": 229
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/dotnet_format.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 34
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/purge_cache.py": {
+        "functions": [
+          "main"
+        ],
+        "classes": [],
+        "num_lines": 47
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/char_range_fetch.py": {
+        "functions": [
+          "merge_ranges",
+          "parse_unicode_data",
+          "make_array",
+          "generate_char_range_inc"
+        ],
+        "classes": [],
+        "num_lines": 137
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/header_guards.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 88
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/copyright_headers.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 96
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/install_d3d12_sdk_windows.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 146
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/unicode_ranges_fetch.py": {
+        "functions": [
+          "parse_unicode_data",
+          "make_array",
+          "generate_unicode_ranges_inc"
+        ],
+        "classes": [],
+        "num_lines": 99
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/file_format.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 51
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/ucaps_fetch.py": {
+        "functions": [
+          "parse_unicode_data",
+          "make_cap_table",
+          "generate_ucaps_fetch"
+        ],
+        "classes": [],
+        "num_lines": 117
+      },
+      "/tmp/cs-godot-demo-1/misc/scripts/check_ci_log.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 67
+      },
+      "/tmp/cs-godot-demo-1/misc/utility/color.py": {
+        "functions": [
+          "is_stdout_color",
+          "is_stderr_color",
+          "force_stdout_color",
+          "force_stderr_color",
+          "color_print",
+          "color_printerr",
+          "print_info",
+          "print_warning",
+          "print_error",
+          "__str__",
+          "_win_color_fix",
+          "err_handler"
+        ],
+        "classes": [
+          "Ansi"
+        ],
+        "num_lines": 152
+      },
+      "/tmp/cs-godot-demo-1/misc/utility/scons_hints.py": {
+        "functions": [],
+        "classes": [],
+        "num_lines": 98
+      },
+      "/tmp/cs-godot-demo-1/misc/utility/godot_gdb_pretty_print.py": {
+        "functions": [
+          "lookup_pretty_printer",
+          "__init__",
+          "to_string",
+          "display_hint",
+          "__init__",
+          "to_string",
+          "display_hint",
+          "__init__",
+          "get_size",
+          "children",
+          "to_string",
+          "display_hint"
+        ],
+        "classes": [
+          "GodotStringNamePrinter",
+          "GodotStringPrinter",
+          "GodotVectorPrinter"
+        ],
+        "num_lines": 119
+      }
+    },
+    "graph": {
+      "/tmp/cs-godot-demo-1/glsl_builders.py": [
+        "os.path",
+        "methods"
+      ],
+      "os.path": [],
+      "methods": [],
+      "/tmp/cs-godot-demo-1/version.py": [],
+      "/tmp/cs-godot-demo-1/methods.py": [
+        "atexit",
+        "contextlib",
+        "glob",
+        "math",
+        "os",
+        "re",
+        "subprocess",
+        "sys",
+        "textwrap",
+        "zlib",
+        "collections",
+        "io",
+        "pathlib",
+        "typing",
+        "misc.utility.color",
+        "platform_methods",
+        "version",
+        "SCons.Script",
+        "SCons.Variables.BoolVariable",
+        "SCons.Tool.MSCommon.vc",
+        "SCons",
+        "shlex",
+        "SCons.Script.Main",
+        "time",
+        "hashlib",
+        "json",
+        "uuid",
+        "msvs"
+      ],
+      "atexit": [],
+      "contextlib": [],
+      "glob": [],
+      "math": [],
+      "os": [],
+      "re": [],
+      "subprocess": [],
+      "sys": [],
+      "textwrap": [],
+      "zlib": [],
+      "collections": [],
+      "io": [],
+      "pathlib": [],
+      "typing": [],
+      "misc.utility.color": [],
+      "platform_methods": [],
+      "version": [],
+      "SCons.Script": [],
+      "SCons.Variables.BoolVariable": [],
+      "SCons.Tool.MSCommon.vc": [],
+      "SCons": [],
+      "shlex": [],
+      "SCons.Script.Main": [],
+      "time": [],
+      "hashlib": [],
+      "json": [],
+      "uuid": [],
+      "msvs": [],
+      "/tmp/cs-godot-demo-1/platform_methods.py": [
+        "os",
+        "platform",
+        "shutil",
+        "subprocess",
+        "sys",
+        "methods",
+        "version",
+        "pathlib",
+        "SCons.Script"
+      ],
+      "platform": [],
+      "shutil": [],
+      "/tmp/cs-godot-demo-1/gles3_builders.py": [
+        "os.path",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/scu_builders.py": [
+        "glob",
+        "math",
+        "os",
+        "pathlib",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/core/core_builders.py": [
+        "collections",
+        "io",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/platform/platform_builders.py": [
+        "pathlib",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/tests/create_test.py": [
+        "argparse",
+        "os",
+        "re",
+        "sys",
+        "subprocess"
+      ],
+      "argparse": [],
+      "/tmp/cs-godot-demo-1/main/main_builders.py": [
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/modules/modules_builders.py": [
+        "os",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/editor/editor_builders.py": [
+        "os",
+        "os.path",
+        "subprocess",
+        "tempfile",
+        "uuid",
+        "methods"
+      ],
+      "tempfile": [],
+      "/tmp/cs-godot-demo-1/editor/template_builders.py": [
+        "os",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/editor/icons/editor_icons_builders.py": [
+        "os",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/editor/themes/editor_theme_builders.py": [
+        "os",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/modules/svg/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/enet/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/websocket/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/ogg/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/meshoptimizer/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/csg/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/tinyexr/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/vorbis/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/objectdb_profiler/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/lightmapper_rd/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/freetype/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/gdscript/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/openxr/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/minimp3/config.py": [
+        "SCons.Variables"
+      ],
+      "SCons.Variables": [],
+      "/tmp/cs-godot-demo-1/modules/upnp/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/camera/config.py": [
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/modules/ktx/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/fbx/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/hdr/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/jsonrpc/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/mbedtls/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/etcpak/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/tga/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/godot_physics_3d/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/gltf/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/basis_universal/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/webp/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/regex/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/glslang/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/navigation_3d/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/jpg/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/interactive_music/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/zip/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/navigation_2d/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/godot_physics_2d/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/webxr/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/text_server_fb/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/noise/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/raycast/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/raycast/godot_update_embree.py": [
+        "glob",
+        "os",
+        "re",
+        "shutil",
+        "stat",
+        "subprocess",
+        "sys",
+        "typing"
+      ],
+      "stat": [],
+      "/tmp/cs-godot-demo-1/modules/mono/config.py": [
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/modules/mono/__init__.py": [],
+      "/tmp/cs-godot-demo-1/modules/jolt_physics/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/msdfgen/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/text_server_adv/config.py": [
+        "SCons.Variables"
+      ],
+      "/tmp/cs-godot-demo-1/modules/text_server_adv/text_server_adv_builders.py": [
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/modules/astcenc/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/dds/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/cvtt/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/bmp/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/theora/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/webrtc/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/bcdec/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/mobile_vr/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/xatlas_unwrap/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/multiplayer/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/betsy/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/gridmap/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/vhacd/config.py": [],
+      "/tmp/cs-godot-demo-1/modules/text_server_adv/gdextension_build/methods.py": [
+        "atexit",
+        "time",
+        "os"
+      ],
+      "/tmp/cs-godot-demo-1/modules/mono/build_scripts/build_assemblies.py": [
+        "os",
+        "os.path",
+        "shlex",
+        "subprocess",
+        "dataclasses",
+        "typing",
+        "sys",
+        "methods",
+        "version",
+        "argparse",
+        "re",
+        "shutil"
+      ],
+      "dataclasses": [],
+      "/tmp/cs-godot-demo-1/modules/mono/build_scripts/mono_configure.py": [],
+      "/tmp/cs-godot-demo-1/modules/mono/build_scripts/__init__.py": [],
+      "/tmp/cs-godot-demo-1/modules/text_server_fb/gdextension_build/methods.py": [
+        "atexit",
+        "time",
+        "os"
+      ],
+      "/tmp/cs-godot-demo-1/scene/theme/default_theme_builders.py": [
+        "os",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/scene/theme/icons/default_theme_icons_builders.py": [
+        "os",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/doc/tools/make_rst.py": [
+        "argparse",
+        "os",
+        "re",
+        "sys",
+        "xml.etree.ElementTree",
+        "collections",
+        "typing",
+        "version",
+        "misc.utility.color",
+        "polib"
+      ],
+      "xml.etree.ElementTree": [],
+      "polib": [],
+      "/tmp/cs-godot-demo-1/doc/tools/doc_status.py": [
+        "fnmatch",
+        "math",
+        "os",
+        "re",
+        "sys",
+        "xml.etree.ElementTree",
+        "typing",
+        "misc.utility.color"
+      ],
+      "fnmatch": [],
+      "/tmp/cs-godot-demo-1/tests/python_build/validate_builders.py": [
+        "__future__",
+        "os",
+        "sys",
+        "typing",
+        "gles3_builders",
+        "glsl_builders"
+      ],
+      "__future__": [],
+      "gles3_builders": [],
+      "glsl_builders": [],
+      "/tmp/cs-godot-demo-1/platform/macos/platform_macos_builders.py": [
+        "os",
+        "shutil",
+        "subprocess",
+        "platform_methods"
+      ],
+      "/tmp/cs-godot-demo-1/platform/macos/msvs.py": [],
+      "/tmp/cs-godot-demo-1/platform/macos/detect.py": [
+        "os",
+        "sys",
+        "typing",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Variables"
+      ],
+      "SCons.Script.SConscript": [],
+      "/tmp/cs-godot-demo-1/platform/web/serve.py": [
+        "argparse",
+        "contextlib",
+        "os",
+        "socket",
+        "subprocess",
+        "sys",
+        "http.server",
+        "pathlib"
+      ],
+      "socket": [],
+      "http.server": [],
+      "/tmp/cs-godot-demo-1/platform/web/emscripten_helpers.py": [
+        "json",
+        "os",
+        "SCons.Util",
+        "platform_methods"
+      ],
+      "SCons.Util": [],
+      "/tmp/cs-godot-demo-1/platform/web/detect.py": [
+        "os",
+        "sys",
+        "pathlib",
+        "typing",
+        "emscripten_helpers",
+        "SCons.Util",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Variables"
+      ],
+      "emscripten_helpers": [],
+      "/tmp/cs-godot-demo-1/platform/ios/platform_ios_builders.py": [
+        "platform_methods"
+      ],
+      "/tmp/cs-godot-demo-1/platform/ios/detect.py": [
+        "os",
+        "sys",
+        "typing",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Variables"
+      ],
+      "/tmp/cs-godot-demo-1/platform/visionos/platform_visionos_builders.py": [
+        "platform_methods"
+      ],
+      "/tmp/cs-godot-demo-1/platform/visionos/detect.py": [
+        "os",
+        "sys",
+        "typing",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Variables"
+      ],
+      "/tmp/cs-godot-demo-1/platform/android/platform_android_builders.py": [
+        "subprocess",
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/platform/android/detect.py": [
+        "os",
+        "platform",
+        "subprocess",
+        "sys",
+        "typing",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Variables"
+      ],
+      "/tmp/cs-godot-demo-1/platform/windows/msvs.py": [
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/platform/windows/platform_windows_builders.py": [
+        "os"
+      ],
+      "/tmp/cs-godot-demo-1/platform/windows/detect.py": [
+        "os",
+        "re",
+        "subprocess",
+        "sys",
+        "typing",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Tool.MSCommon",
+        "SCons.Variables",
+        "SCons.Subst",
+        "tempfile",
+        "inspect"
+      ],
+      "SCons.Tool.MSCommon": [],
+      "SCons.Subst": [],
+      "inspect": [],
+      "/tmp/cs-godot-demo-1/platform/linuxbsd/platform_linuxbsd_builders.py": [
+        "os"
+      ],
+      "/tmp/cs-godot-demo-1/platform/linuxbsd/msvs.py": [],
+      "/tmp/cs-godot-demo-1/platform/linuxbsd/detect.py": [
+        "os",
+        "platform",
+        "sys",
+        "typing",
+        "methods",
+        "platform_methods",
+        "SCons.Script.SConscript",
+        "SCons.Variables"
+      ],
+      "/tmp/cs-godot-demo-1/core/extension/make_interface_dumper.py": [
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/core/extension/make_wrappers.py": [],
+      "/tmp/cs-godot-demo-1/core/input/input_builders.py": [
+        "collections",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/core/object/make_virtuals.py": [],
+      "/tmp/cs-godot-demo-1/misc/scripts/dotnet_format.py": [
+        "glob",
+        "os",
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/purge_cache.py": [
+        "argparse",
+        "glob",
+        "os",
+        "signal"
+      ],
+      "signal": [],
+      "/tmp/cs-godot-demo-1/misc/scripts/char_range_fetch.py": [
+        "os",
+        "sys",
+        "typing",
+        "urllib.request",
+        "methods"
+      ],
+      "urllib.request": [],
+      "/tmp/cs-godot-demo-1/misc/scripts/header_guards.py": [
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/copyright_headers.py": [
+        "os",
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/install_d3d12_sdk_windows.py": [
+        "argparse",
+        "os",
+        "shutil",
+        "subprocess",
+        "sys",
+        "urllib.request",
+        "misc.utility.color"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/unicode_ranges_fetch.py": [
+        "os",
+        "sys",
+        "typing",
+        "urllib.request",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/file_format.py": [
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/ucaps_fetch.py": [
+        "os",
+        "sys",
+        "typing",
+        "urllib.request",
+        "methods"
+      ],
+      "/tmp/cs-godot-demo-1/misc/scripts/check_ci_log.py": [
+        "sys"
+      ],
+      "/tmp/cs-godot-demo-1/misc/utility/color.py": [
+        "__future__",
+        "os",
+        "re",
+        "sys",
+        "enum",
+        "typing",
+        "ctypes",
+        "ctypes.wintypes"
+      ],
+      "enum": [],
+      "ctypes": [],
+      "ctypes.wintypes": [],
+      "/tmp/cs-godot-demo-1/misc/utility/scons_hints.py": [
+        "typing",
+        "SCons.Action",
+        "SCons.Builder",
+        "SCons.Defaults",
+        "SCons.Environment",
+        "SCons.Platform",
+        "SCons.Platform.virtualenv",
+        "SCons.Scanner",
+        "SCons.Script",
+        "SCons.Script.Main",
+        "SCons.Script.SConscript",
+        "SCons.Subst",
+        "SCons.Tool",
+        "SCons.Util",
+        "SCons.Variables"
+      ],
+      "SCons.Action": [],
+      "SCons.Builder": [],
+      "SCons.Defaults": [],
+      "SCons.Environment": [],
+      "SCons.Platform": [],
+      "SCons.Platform.virtualenv": [],
+      "SCons.Scanner": [],
+      "SCons.Tool": [],
+      "/tmp/cs-godot-demo-1/misc/utility/godot_gdb_pretty_print.py": [
+        "re",
+        "gdb",
+        "gdb.printing"
+      ],
+      "gdb": [],
+      "gdb.printing": []
+    }
+  },
+  "profile": {
+    "error": "expected an indented block after function definition on line 28 (main.py, line 29)"
+  },
+  "compliance": {
+    "domain": "gaming",
+    "targets": [],
+    "findings": [
+      {
+        "rule": "render-batch",
+        "status": "unknown",
+        "note": "Prefer batching draw calls to improve FPS.",
+        "risk": "Excessive per-frame allocations"
+      },
+      {
+        "rule": "asset-io",
+        "status": "unknown",
+        "note": "Avoid synchronous I/O on main thread.",
+        "risk": "Frame stutter"
+      }
+    ],
+    "summary": {
+      "passed": 0,
+      "warn": 2,
+      "failed": 0
+    }
+  },
+  "benchmark": {
+    "before": {
+      "domain": "gaming",
+      "project_path": "/tmp/cs-godot-demo-1",
+      "baseline_path": null,
+      "result": {
+        "domain": "gaming",
+        "metric": "fps",
+        "value": 52.1,
+        "details": {
+          "runtime_sec": 0.76,
+          "cpu_util": 70.7,
+          "mem_mb": 218.4
+        }
+      },
+      "started": 1760343037.2796748,
+      "finished": 1760343037.279718,
+      "duration_sec": 0.0
+    },
+    "after": {
+      "domain": "gaming",
+      "project_path": "/tmp/cs-godot-demo-1",
+      "baseline_path": null,
+      "result": {
+        "domain": "gaming",
+        "metric": "fps",
+        "value": 52.1,
+        "details": {
+          "runtime_sec": 0.76,
+          "cpu_util": 70.7,
+          "mem_mb": 218.4
+        }
+      },
+      "started": 1760343037.280573,
+      "finished": 1760343037.2805781,
+      "duration_sec": 0.0
+    },
+    "compare": {
+      "metric": "fps",
+      "before": 52.1,
+      "after": 52.1,
+      "delta": 0.0,
+      "improved": false
+    }
+  },
+  "suggestions": [
+    {
+      "message": " Syntax error: expected an indented block after function definition on line 28 (main.py, line 29)",
+      "patch": "",
+      "reason": "Code could not be parsed. Error: expected an indented block after function definition on line 28 (main.py, line 29)",
+      "audit": {
+        "type": "syntax_error"
+      }
+    }
+  ]
+}

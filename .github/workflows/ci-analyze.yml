@@ -1,0 +1,52 @@
+name: CI Analyze
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend image
+        working-directory: backend
+        run: |
+          docker build -t ai-refactor-backend:ci .
+
+      - name: Run backend container
+        working-directory: backend
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          docker run -d --name ai-refactor -p 8001:8001 \
+            -e GEMINI_API_KEY="$GEMINI_API_KEY" \
+            ai-refactor-backend:ci
+          # Wait for server
+          for i in {1..30}; do curl -sS http://127.0.0.1:8001/ && break || sleep 2; done
+
+      - name: Run CI analyze
+        run: |
+          mkdir -p ci_artifacts
+          curl -sS -X POST http://127.0.0.1:8001/ci/analyze \
+            -H 'Content-Type: application/json' \
+            -d '{"path":"/app","domain":"gaming","complianceTargets":["iec62304"]}' | tee ci_artifacts/ci_analyze_response.json
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-analyze-artifacts
+          path: |
+            ci_artifacts/
+            backend/data/**
+
+      - name: Stop container
+        if: always()
+        run: |
+          docker logs ai-refactor || true
+          docker rm -f ai-refactor || true

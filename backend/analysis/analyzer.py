@@ -2,11 +2,19 @@ import ast
 from pathlib import Path
 import networkx as nx
 
+EXCLUDE_DIRS = {'.venv', 'node_modules', '__pycache__', '.git'}
+
+
 def analyze_project(root_path):
     root = Path(root_path)
     if not root.exists():
         return {'error': 'path not found'}
-    py_files = list(root.rglob('*.py'))
+    py_files = []
+    for p in root.rglob('*.py'):
+        parts = set(p.parts)
+        if parts & EXCLUDE_DIRS:
+            continue
+        py_files.append(p)
     modules = {}
     G = nx.DiGraph()
     for p in py_files:
