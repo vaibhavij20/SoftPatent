@@ -1,0 +1,12 @@
+{
+  "code": "\n            def factorial(n):\n                if n == 0:\n                    return 1\n                return n * factorial(n-1)\n            ",
+  "metrics": {
+    "runtime": 0.0015,
+    "memory": 2.5,
+    "optimization_type": "recursion_to_iteration",
+    "improvement": 0.35
+  },
+  "domain": "mathematics",
+  "timestamp": 1762417083.932134,
+  "hash": "2ff22a08077f09f37bbbcca88fec3ace"
+}

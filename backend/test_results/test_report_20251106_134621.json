@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-06T08:16:21.469245",
+  "tests_run": 2,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "successful": false,
+  "test_cases": [
+    {
+      "name": "test_02_find_similar_optimizations (test_gnn_invariant_classifier.TestGNNInvariantClassifier.test_02_find_similar_optimizations)",
+      "status": "failed",
+      "error": "test_02_find_similar_optimizations"
+    }
+  ]
+}

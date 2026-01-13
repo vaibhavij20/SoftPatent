@@ -1,0 +1,12 @@
+{
+  "code": "def old_func(): pass",
+  "metrics": {
+    "runtime": 0.001,
+    "memory": 2.0,
+    "optimization_type": "old_optimization",
+    "timestamp": 1759738683.93474
+  },
+  "domain": "test",
+  "timestamp": 1762417083.934742,
+  "hash": "ac59b0f1a0e925bd5e0e43d927864395"
+}

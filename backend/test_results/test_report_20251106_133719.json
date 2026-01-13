@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-06T08:07:19.597628",
+  "tests_run": 1,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "successful": false,
+  "test_cases": [
+    {
+      "name": "test_gnn_invariant_classifier (unittest.loader._FailedTest.test_gnn_invariant_classifier)",
+      "status": "error",
+      "error": "test_gnn_invariant_classifier"
+    }
+  ]
+}

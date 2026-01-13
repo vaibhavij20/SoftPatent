@@ -1,0 +1,12 @@
+{
+  "code": "\n            def calculate_fibonacci(n):\n                if n <= 1:\n                    return n\n                a, b = 0, 1\n                for _ in range(2, n + 1):\n                    a, b = b, a + b\n                return b\n            ",
+  "metrics": {
+    "runtime": 0.0015,
+    "memory": 2.5,
+    "optimization_type": "loop_unrolling",
+    "improvement": 0.35
+  },
+  "domain": "algorithms",
+  "timestamp": 1762417083.931614,
+  "hash": "d043bb67ff0b67e17623d07fec31b10f"
+}

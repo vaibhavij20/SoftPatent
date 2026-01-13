@@ -1,178 +1,262 @@
 {
   "files": {
-    "/Users/vaibhavijaiswal/Patent/send_feedback.py": {
-      "functions": [],
-      "classes": [],
-      "num_lines": 36
-    },
-    "/Users/vaibhavijaiswal/Patent/example_repo/main.py": {
-      "error": "expected an indented block after function definition on line 28 (<unknown>, line 29)"
-    },
-    "/Users/vaibhavijaiswal/Patent/example_repo/test_main.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/satellite_processing_system.py": {
       "functions": [
-        "inefficient_sum",
+        "load_satellite_frame",
+        "compute_ndvi",
+        "orbit_drift_predictor",
+        "process_stream"
+      ],
+      "classes": [],
+      "num_lines": 74,
+      "imports": [
+        "random",
+        "logging"
+      ]
+    },
+    "/Users/vaibhavijaiswal/Desktop/python/speech_therapy_pipeline.py": {
+      "functions": [
+        "compute_mfcc",
+        "score_pronunciation",
+        "process_audio_stream",
+        "main"
+      ],
+      "classes": [],
+      "num_lines": 34,
+      "imports": [
+        "numpy",
+        "logging"
+      ]
+    },
+    "/Users/vaibhavijaiswal/Desktop/python/gaming_physics_engine.py": {
+      "functions": [
+        "fast_collision_check",
+        "update_particle",
+        "run_physics_sim",
         "main",
-        "test_add",
-        "test_multiply"
+        "__init__"
       ],
       "classes": [
-        "TestMath"
+        "Particle"
       ],
-      "num_lines": 24
+      "num_lines": 95,
+      "imports": [
+        "math",
+        "random",
+        "time",
+        "logging"
+      ]
     },
-    "/Users/vaibhavijaiswal/Patent/backend/app.py": {
-      "functions": [],
-      "classes": [],
-      "num_lines": 230
+    "/Users/vaibhavijaiswal/Desktop/python/trading_engine.py": {
+      "error": "Syntax error: invalid syntax",
+      "line": 1,
+      "col": 13
     },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/openai_integration.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/complex_pipeline.py": {
+      "error": "Syntax error: invalid syntax",
+      "line": 1,
+      "col": 13
+    },
+    "/Users/vaibhavijaiswal/Desktop/python/hpc_matrix_simulation.py": {
       "functions": [
-        "_configure_gemini",
-        "call_gemini_refactor",
-        "call_ai"
+        "slow_matmul",
+        "worker_thread",
+        "generate_matrix",
+        "main"
       ],
       "classes": [],
-      "num_lines": 38
+      "num_lines": 58,
+      "imports": [
+        "math",
+        "random",
+        "time",
+        "threading"
+      ]
     },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/tree_parser.py": {
-      "error": "expected an indented block after function definition on line 1 (<unknown>, line 2)"
-    },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/benchmark.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/long_function.py": {
       "functions": [
-        "_now_ts",
-        "_simulate_runtime_metrics",
-        "_gaming_fps",
-        "_hpc_linpack",
-        "_robotics_slam",
-        "run_benchmark",
-        "compare_results",
-        "record_result"
+        "long_function",
+        "helper_compute_statistics",
+        "main"
       ],
       "classes": [],
-      "num_lines": 109
+      "num_lines": 80,
+      "imports": [
+        "math",
+        "random",
+        "time"
+      ]
     },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/suggestion.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/robotics_navigation_system.py": {
       "functions": [
-        "_compute_ast_metrics",
-        "_domain_rationale",
-        "generate_suggestions",
-        "generate_suggestion_patch"
+        "a_star",
+        "main",
+        "__init__",
+        "predict",
+        "update",
+        "get_state",
+        "heuristic",
+        "__init__",
+        "update_sensors",
+        "predict_motion",
+        "check_battery",
+        "generate_obstacles",
+        "compute_path",
+        "execute_motion",
+        "run_cycle"
       ],
-      "classes": [],
-      "num_lines": 145
+      "classes": [
+        "KalmanFilter",
+        "RobotController"
+      ],
+      "num_lines": 130,
+      "imports": [
+        "math",
+        "time",
+        "random",
+        "collections",
+        "heapq"
+      ]
     },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/compliance.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/sustainability_grid_optimizer.py": {
       "functions": [
-        "check_compliance"
+        "_generate_demand_point",
+        "simulate_region_load",
+        "compute_solar_output",
+        "compute_wind_output",
+        "aggregate_load",
+        "generate_weather",
+        "optimize_battery_schedule",
+        "summarize_results",
+        "main"
       ],
       "classes": [],
-      "num_lines": 31
+      "num_lines": 225,
+      "imports": [
+        "math",
+        "random",
+        "logging",
+        "typing"
+      ]
     },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/feedback.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/robotics_mpc_navigation_system.py": {
       "functions": [
-        "store_feedback"
+        "simulate_lidar",
+        "mpc_optimize",
+        "estimate_battery_drain",
+        "generate_path",
+        "navigation_loop",
+        "main",
+        "__init__",
+        "predict",
+        "update"
       ],
-      "classes": [],
-      "num_lines": 7
+      "classes": [
+        "EKF"
+      ],
+      "num_lines": 139,
+      "imports": [
+        "math",
+        "random",
+        "time",
+        "logging",
+        "threading",
+        "typing"
+      ]
     },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/analyzer.py": {
+    "/Users/vaibhavijaiswal/Desktop/python/gaming_ai_battle_simulator.py": {
       "functions": [
-        "analyze_project"
+        "vec_length",
+        "vec_normalize",
+        "compute_steering",
+        "physics_step",
+        "detect_collisions",
+        "render_frame",
+        "run_battle_simulation",
+        "main",
+        "__init__",
+        "pos"
       ],
-      "classes": [],
-      "num_lines": 43
-    },
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/profiler.py": {
-      "functions": [
-        "run_profile_on_example"
+      "classes": [
+        "Entity"
       ],
-      "classes": [],
-      "num_lines": 28
+      "num_lines": 142,
+      "imports": [
+        "math",
+        "random",
+        "time",
+        "logging",
+        "typing"
+      ]
     }
   },
   "graph": {
-    "/Users/vaibhavijaiswal/Patent/send_feedback.py": [
-      "requests",
-      "json",
+    "/Users/vaibhavijaiswal/Desktop/python/satellite_processing_system.py": [
+      "random",
+      "logging"
+    ],
+    "random": [],
+    "logging": [],
+    "/Users/vaibhavijaiswal/Desktop/python/speech_therapy_pipeline.py": [
+      "numpy",
+      "logging"
+    ],
+    "numpy": [],
+    "/Users/vaibhavijaiswal/Desktop/python/gaming_physics_engine.py": [
+      "math",
+      "random",
+      "time",
+      "logging"
+    ],
+    "math": [],
+    "time": [],
+    "/Users/vaibhavijaiswal/Desktop/python/hpc_matrix_simulation.py": [
+      "math",
+      "random",
+      "time",
+      "threading"
+    ],
+    "threading": [],
+    "/Users/vaibhavijaiswal/Desktop/python/long_function.py": [
+      "math",
+      "random",
       "time"
     ],
-    "requests": [],
-    "json": [],
-    "time": [],
-    "/Users/vaibhavijaiswal/Patent/example_repo/test_main.py": [
-      "unittest",
-      "main"
-    ],
-    "unittest": [],
-    "main": [],
-    "/Users/vaibhavijaiswal/Patent/backend/app.py": [
-      "fastapi",
-      "fastapi.responses",
-      "os",
-      "json",
+    "/Users/vaibhavijaiswal/Desktop/python/robotics_navigation_system.py": [
+      "math",
       "time",
-      "pathlib",
-      "analysis.analyzer",
-      "analysis.suggestion",
-      "analysis.profiler",
-      "analysis.benchmark",
-      "analysis.feedback",
-      "analysis.compliance"
+      "random",
+      "collections",
+      "heapq"
     ],
-    "fastapi": [],
-    "fastapi.responses": [],
-    "os": [],
-    "pathlib": [],
-    "analysis.analyzer": [],
-    "analysis.suggestion": [],
-    "analysis.profiler": [],
-    "analysis.benchmark": [],
-    "analysis.feedback": [],
-    "analysis.compliance": [],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/openai_integration.py": [
-      "os",
-      "dotenv",
-      "google.generativeai"
-    ],
-    "dotenv": [],
-    "google.generativeai": [],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/benchmark.py": [
-      "json",
-      "time",
-      "pathlib",
+    "collections": [],
+    "heapq": [],
+    "/Users/vaibhavijaiswal/Desktop/python/sustainability_grid_optimizer.py": [
+      "math",
+      "random",
+      "logging",
       "typing"
     ],
     "typing": [],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/suggestion.py": [
-      "ast",
-      "typing",
-      "openai_integration"
-    ],
-    "ast": [],
-    "openai_integration": [],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/compliance.py": [
+    "/Users/vaibhavijaiswal/Desktop/python/robotics_mpc_navigation_system.py": [
+      "math",
+      "random",
+      "time",
+      "logging",
+      "threading",
       "typing"
     ],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/feedback.py": [
-      "json",
-      "pathlib"
-    ],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/analyzer.py": [
-      "ast",
-      "pathlib",
-      "networkx"
-    ],
-    "networkx": [],
-    "/Users/vaibhavijaiswal/Patent/backend/analysis/profiler.py": [
-      "cProfile",
-      "pstats",
-      "io",
-      "runpy",
-      "pathlib"
-    ],
-    "cProfile": [],
-    "pstats": [],
-    "io": [],
-    "runpy": []
+    "/Users/vaibhavijaiswal/Desktop/python/gaming_ai_battle_simulator.py": [
+      "math",
+      "random",
+      "time",
+      "logging",
+      "typing"
+    ]
+  },
+  "stats": {
+    "num_files": 11,
+    "num_modules": 11,
+    "num_edges": 35
   }
 }

@@ -1,133 +1,131 @@
 import os
-from typing import Any, Dict, Optional
+import json
+import hashlib
+from pathlib import Path
+from typing import Dict, List, Optional, Any
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch_geometric.nn import GCNConv, global_mean_pool
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
-# Optional: torch and torch_geometric are not hard requirements.
-# The classifier will gracefully fall back to heuristic mode if these are missing
-try:
-    import torch  # type: ignore
-    TORCH_AVAILABLE = True
-except Exception:
-    TORCH_AVAILABLE = False
+class GNNInvariantClassifier(nn.Module):
+    """GNN-based invariant classifier for code optimizations."""
+    
+    def __init__(self, input_dim: int = 128, hidden_dim: int = 64, output_dim: int = 32):
+        super().__init__()
+        self.conv1 = GCNConv(input_dim, hidden_dim)
+        self.conv2 = GCNConv(hidden_dim, hidden_dim)
+        self.fc = nn.Linear(hidden_dim, output_dim)
+        
+    def forward(self, x, edge_index, batch=None):
+        x = self.conv1(x, edge_index).relu()
+        x = self.conv2(x, edge_index).relu()
+        if batch is not None:
+            x = global_mean_pool(x, batch)
+        return self.fc(x)
 
+class OptimizationDatabase:
+    """Database for storing and retrieving code optimizations."""
+    
+    def __init__(self, db_path: Optional[str] = None):
+        self.db_path = db_path or str(Path.home() / ".code_optimizations.json")
+        self.optimizations = self._load_optimizations()
+        
+    def _load_optimizations(self) -> List[Dict[str, Any]]:
+        """Load optimizations from the database file."""
+        try:
+            if os.path.exists(self.db_path):
+                with open(self.db_path, 'r') as f:
+                    return json.load(f)
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"Warning: Failed to load optimizations: {e}")
+        return []
+    
+    def save_optimization(self, optimization: Dict[str, Any]) -> str:
+        """Save an optimization to the database."""
+        try:
+            optimization['id'] = hashlib.sha256(
+                (optimization['original_code'] + optimization['optimized_code']).encode()
+            ).hexdigest()
+            
+            self.optimizations.append(optimization)
+            
+            # Save to file
+            with open(self.db_path, 'w') as f:
+                json.dump(self.optimizations, f, indent=2)
+                
+            return optimization['id']
+        except (IOError, KeyError) as e:
+            print(f"Error saving optimization: {e}")
+            raise
 
-class InvariantClassifier:
-    """
-    Pluggable classifier for architectural invariant risk.
+def get_classifier() -> GNNInvariantClassifier:
+    """Get or create a GNN classifier instance."""
+    model = GNNInvariantClassifier()
+    # Load pre-trained weights if available
+    model_path = Path(__file__).parent / "models" / "gnn_invariants.pt"
+    if model_path.exists():
+        try:
+            model.load_state_dict(torch.load(model_path))
+        except Exception as e:
+            print(f"Warning: Failed to load model weights: {e}")
+    return model
 
-    Strategy:
-    - If a torch model checkpoint is provided and torch is available, load it and run inference.
-    - Otherwise, use a simple heuristic on the provided graph + patch text.
+# Global database instance
+_optimization_db = OptimizationDatabase()
 
-    Inputs:
-    - graph: a project graph as produced by `analyzer.analyze_project()` (or None)
-    - patch: text describing the suggested change
-    - domain: 'gaming' | 'robotics' | 'hpc' | 'medical' | None
-
-    Output schema (example):
-    {
-      "ok": true,
-      "risk_score": 0.12,             # 0..1 (1 = high risk)
-      "violations": [
-         {"type": "layer_crossing", "detail": "ui->data access"}
-      ],
-      "explanations": ["Why the risk was predicted"],
-      "provider": "gnn|heuristic",
-      "model": "path-or-name-if-any"
+def store_optimization(
+    original_code: str,
+    optimized_code: str,
+    performance_improvement: float,
+    domain: str = "general",
+    metadata: Optional[Dict] = None
+) -> str:
+    """Store a code optimization in the database."""
+    if not original_code or not optimized_code:
+        raise ValueError("Original and optimized code cannot be empty")
+        
+    if not isinstance(performance_improvement, (int, float)) or performance_improvement < 0:
+        raise ValueError("Performance improvement must be a non-negative number")
+    
+    optimization = {
+        'original_code': original_code,
+        'optimized_code': optimized_code,
+        'performance_improvement': float(performance_improvement),
+        'domain': domain,
+        'metadata': metadata or {},
+        'timestamp': str(datetime.utcnow())
     }
-    """
+    
+    return _optimization_db.save_optimization(optimization)
 
-    def __init__(self, model_path: Optional[str] = None, provider_name: str = "heuristic") -> None:
-        self.model_path = model_path or os.getenv("GNN_INVARIANT_MODEL")
-        self.provider_name = provider_name
-        self.model = None
-        if self.model_path and TORCH_AVAILABLE:
-            try:
-                self.model = torch.jit.load(self.model_path)
-                self.provider_name = "gnn"
-            except Exception:
-                self.model = None
-                self.provider_name = "heuristic"
-
-    def predict(self, graph: Optional[Dict[str, Any]], patch: str, domain: Optional[str]) -> Dict[str, Any]:
-        # If we have a model, attempt inference
-        if self.model is not None and TORCH_AVAILABLE:
-            try:
-                # Minimal representation: derive simple numeric features
-                # In a real system, this would convert the project graph into a tensor dataset
-                text_len = len(patch or "")
-                domain_idx = {"gaming": 0, "robotics": 1, "hpc": 2, "medical": 3}.get((domain or "").lower(), 4)
-                x = torch.tensor([float(text_len % 1024) / 1024.0, float(domain_idx) / 4.0]).float().unsqueeze(0)
-                with torch.no_grad():
-                    y = self.model(x).sigmoid().item() if hasattr(self.model, "__call__") else 0.1
-                risk = max(0.0, min(1.0, float(y)))
-                ok = risk < 0.5
-                return {
-                    "ok": ok,
-                    "risk_score": risk,
-                    "violations": [] if ok else [{"type": "gnn_predicted_risk", "detail": f"risk={risk:.2f}"}],
-                    "explanations": ["GNN model predicted architectural risk based on learned invariants."],
-                    "provider": self.provider_name,
-                    "model": self.model_path,
-                }
-            except Exception as e:
-                # Fall back to heuristic on any failure
-                return self._heuristic(graph, patch, domain, error=str(e))
-        # Heuristic
-        return self._heuristic(graph, patch, domain)
-
-    def _heuristic(self, graph: Optional[Dict[str, Any]], patch: str, domain: Optional[str], error: Optional[str] = None) -> Dict[str, Any]:
-        """Simple rule-of-thumb detector for obvious boundary crossings.
-        Looks for sensitive keywords and cross-layer terms in the patch text.
-        """
-        txt = (patch or "").lower()
-        risk = 0.0
-        violations = []
-        # Indicators of crossing layers or mixing concerns
-        cues = [
-            ("ui->data", ["ui", "view", "react"], ["db", "sql", "orm", "repository"]),
-            ("control->hardware", ["control", "planner"], ["gpio", "spi", "i2c", "sensor"]),
-            ("api->internal", ["api", "endpoint"], ["internal", "private"]),
-        ]
-        for name, left, right in cues:
-            if any(l in txt for l in left) and any(r in txt for r in right):
-                violations.append({"type": "layer_crossing", "detail": name})
-                risk = max(risk, 0.7)
-        # Domain cue
-        d = (domain or "").lower()
-        if d == "medical" and ("print(" in txt or "debug" in txt):
-            violations.append({"type": "domain_policy", "detail": "unstructured logging in medical domain"})
-            risk = max(risk, 0.6)
-        ok = risk < 0.5
-        out = {
-            "ok": ok,
-            "risk_score": risk if risk > 0 else 0.1,
-            "violations": violations,
-            "explanations": ["Heuristic classifier evaluated potential boundary crossings."],
-            "provider": "heuristic",
-            "model": None,
-        }
-        if error:
-            out["note"] = f"model_error: {error}"
-        return out
-
-    # Optional training API (stub)
-    def fit(self, dataset_path: str, epochs: int = 5) -> Dict[str, Any]:
-        """Train or fine-tune the model on a user-provided dataset (stub)."""
-        if not TORCH_AVAILABLE:
-            return {"status": "error", "detail": "torch not installed"}
-        # Placeholder: load dataset, define model, train, and save
-        return {"status": "ok", "detail": "training stub completed"}
-
-
-# Singleton with env-configurable checkpoint
-_classifier_singleton: Optional[InvariantClassifier] = None
-
-def get_classifier() -> InvariantClassifier:
-    global _classifier_singleton
-    if _classifier_singleton is None:
-        _classifier_singleton = InvariantClassifier()
-    return _classifier_singleton
-
-
-def classify(graph: Optional[Dict[str, Any]], patch: str, domain: Optional[str]) -> Dict[str, Any]:
-    return get_classifier().predict(graph, patch, domain)
+def find_similar_optimization(
+    code: str,
+    threshold: float = 0.8,
+    domain: Optional[str] = None
+) -> Optional[Dict[str, Any]]:
+    """Find a similar optimization in the database."""
+    if not code:
+        raise ValueError("Code cannot be empty")
+        
+    if not 0 <= threshold <= 1:
+        raise ValueError("Threshold must be between 0 and 1")
+    
+    # Simple similarity check (replace with actual GNN-based similarity)
+    best_match = None
+    best_score = threshold
+    
+    for opt in _optimization_db.optimizations:
+        if domain and opt.get('domain') != domain:
+            continue
+            
+        # Simple string similarity (replace with actual code embedding)
+        score = sum(c1 == c2 for c1, c2 in zip(code, opt['original_code'])) / max(len(code), len(opt['original_code']))
+        
+        if score > best_score:
+            best_score = score
+            best_match = opt
+    
+    return best_match

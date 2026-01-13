@@ -1,0 +1,1 @@
+def old_func(): pass

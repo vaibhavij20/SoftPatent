@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-06T08:18:03.935780",
+  "tests_run": 4,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "successful": false,
+  "test_cases": [
+    {
+      "name": "test_04_repository_management (test_gnn_invariant_classifier.TestGNNInvariantClassifier.test_04_repository_management)",
+      "status": "error",
+      "error": "test_04_repository_management"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-11-06T08:17:24.979553",
+  "tests_run": 3,
+  "failures": 1,
+  "errors": 0,
+  "skipped": 0,
+  "successful": false,
+  "test_cases": [
+    {
+      "name": "test_03_classification_with_optimizations (test_gnn_invariant_classifier.TestGNNInvariantClassifier.test_03_classification_with_optimizations)",
+      "status": "failed",
+      "error": "test_03_classification_with_optimizations"
+    }
+  ]
+}
